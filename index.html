@@ -15,7 +15,7 @@ background:#1C75BC;
 color:white;
 }
 
-/* 🔵 AZUL PROFUNDO */
+/* AZUL PROFUNDO */
 .deep-blue {
 background:#062C4F;
 }
@@ -74,6 +74,7 @@ background:#EAF4FF;
 color:#062C4F;
 }
 
+/* GRID GENERAL */
 .grid {
 display:grid;
 grid-template-columns:1fr 1fr 1fr;
@@ -90,6 +91,39 @@ border-radius:12px;
 
 .light .box {
 background:white;
+}
+
+/* 🔥 NUEVO BLOQUE IMÁGENES NAVIERAS */
+.image-grid {
+display:grid;
+grid-template-columns:1fr 1fr 1fr;
+gap:24px;
+max-width:1100px;
+margin:40px auto 0 auto;
+}
+
+.image-card {
+text-align:center;
+}
+
+.card-image {
+width:100%;
+height:260px;
+object-fit:cover;
+border-radius:14px;
+box-shadow:0 12px 30px rgba(0,0,0,0.18);
+transition:0.3s;
+}
+
+.card-image:hover {
+transform:translateY(-6px);
+box-shadow:0 18px 36px rgba(0,0,0,0.25);
+}
+
+.card-title {
+margin-top:14px;
+font-size:18px;
+font-weight:600;
 }
 
 /* ODS */
@@ -114,20 +148,19 @@ background:#062C4F;
 .footer-logo {
 width:140px;
 margin-bottom:15px;
-opacity:0.9;
 }
 
 .footer p {
-margin:0;
-opacity:0.8;
 font-size:14px;
+opacity:0.8;
 }
 
 /* RESPONSIVE */
 @media(max-width:800px){
-.grid{grid-template-columns:1fr;}
-.hero h1{font-size:32px;}
-.hero p{font-size:18px;}
+.grid { grid-template-columns:1fr; }
+.image-grid { grid-template-columns:1fr; }
+.hero h1 { font-size:32px; }
+.hero p { font-size:18px; }
 }
 </style>
 
@@ -140,7 +173,6 @@ font-size:14px;
 <div class="overlay"></div>
 
 <div class="hero-content">
-
 <img src="logo%20blanco%20sin%20fondo.png" class="logo">
 
 <h1>La capa de inteligencia que falta entre el puerto y la ciudad</h1>
@@ -191,23 +223,26 @@ El turismo de cruceros crece cada año, pero sigue sin existir una capa real de 
 
 </div>
 
-<!-- NAVIERAS -->
+<!-- 🔥 NAVIERAS CON IMÁGENES -->
 <div class="section deep-blue">
 
 <h2>Diseñado para navieras</h2>
 
-<div class="grid">
+<div class="image-grid">
 
-<div class="box">
-<p>Refuerzo ESG y reputacional</p>
+<div class="image-card">
+<img src="naviera1.jpg" class="card-image">
+<p class="card-title">Refuerzo ESG y reputacional</p>
 </div>
 
-<div class="box">
-<p>Mejor experiencia en tierra</p>
+<div class="image-card">
+<img src="naviera2.jpg" class="card-image">
+<p class="card-title">Mejor experiencia en tierra</p>
 </div>
 
-<div class="box">
-<p>Datos para decisiones estratégicas</p>
+<div class="image-card">
+<img src="naviera3.jpg" class="card-image">
+<p class="card-title">Datos para decisiones estratégicas</p>
 </div>
 
 </div>
@@ -246,7 +281,7 @@ El turismo de cruceros crece cada año, pero sigue sin existir una capa real de 
 <img src="IMAGEN%20ODS.png" class="ods-icons">
 </div>
 
-<p style="margin-top:20px; opacity:0.85;">
+<p style="margin-top:20px;">
 ODS 3 · ODS 11 · ODS 14
 </p>
 
