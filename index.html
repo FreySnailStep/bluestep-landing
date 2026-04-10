@@ -106,20 +106,34 @@ body {
   text-align: center;
 }
 
+/* BASE */
 .card-image {
   width: 100%;
   height: 260px;
-  object-fit: cover;
   border-radius: 14px;
   box-shadow: 0 12px 30px rgba(0,0,0,0.18);
   transition: 0.3s;
 }
 
+/* NAVIERAS */
+.naviera-img {
+  object-fit: cover;
+}
+
+/* CIUDADES */
+.contain-image {
+  object-fit: contain;
+  background: transparent;
+  padding: 0;
+}
+
+/* HOVER */
 .card-image:hover {
   transform: translateY(-6px);
   box-shadow: 0 18px 36px rgba(0,0,0,0.25);
 }
 
+/* TÍTULOS */
 .card-title {
   margin-top: 14px;
   font-size: 18px;
@@ -128,29 +142,6 @@ body {
 
 .dark-title {
   color: #062C4F;
-}
-
-.contain-image {
-  object-fit: contain;
-  background: transparent;
-  padding: 0;
-  height: 260px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.image-card img.contain-image {
-  max-height: 220px;
-  margin: auto;
-}
-
-.image-card:nth-child(2) img {
-  transform: scale(1.2);
-}
-
-.image-card:nth-child(3) img {
-  max-height: 240px;
 }
 
 /* ODS */
@@ -200,7 +191,7 @@ body {
   <div class="overlay"></div>
 
   <div class="hero-content">
-    <img src="logo blanco sin fondo.png" class="logo" alt="BlueStep">
+    <img src="logo blanco sin fondo.png" class="logo">
 
     <h1>La capa de inteligencia que falta entre el puerto y la ciudad</h1>
 
@@ -213,7 +204,7 @@ body {
 <!-- PROBLEMA -->
 <div class="section light">
 
-  <img src="logo azul sin fondo.png" style="width:120px; margin-bottom:20px;" alt="BlueStep azul">
+  <img src="logo azul sin fondo.png" style="width:120px; margin-bottom:20px;">
 
   <h2>12,8 millones de cruceristas y sin datos reales en tierra</h2>
 
@@ -257,17 +248,17 @@ body {
   <div class="image-grid">
 
     <div class="image-card">
-      <img src="naviera1.png" class="card-image" alt="Refuerzo ESG y reputacional">
+      <img src="naviera1.png" class="card-image naviera-img">
       <p class="card-title">Refuerzo ESG y reputacional</p>
     </div>
 
     <div class="image-card">
-      <img src="naviera2.png" class="card-image" alt="Mejor experiencia en tierra">
+      <img src="naviera2.png" class="card-image naviera-img">
       <p class="card-title">Mejor experiencia en tierra</p>
     </div>
 
     <div class="image-card">
-      <img src="naviera3.png" class="card-image" alt="Datos para decisiones estratégicas">
+      <img src="naviera3.png" class="card-image naviera-img">
       <p class="card-title">Datos para decisiones estratégicas</p>
     </div>
 
@@ -283,17 +274,17 @@ body {
   <div class="image-grid">
 
     <div class="image-card">
-      <img src="ciudad1.png" class="card-image" alt="Planificación urbana basada en datos">
+      <img src="ciudades1.png" class="card-image contain-image">
       <p class="card-title dark-title">Planificación urbana basada en datos</p>
     </div>
 
     <div class="image-card">
-      <img src="ciudad2.png" class="card-image contain-image" alt="Certificación Blue Label 2.0">
+      <img src="ciudades2.png" class="card-image contain-image">
       <p class="card-title dark-title">Certificación Blue Label 2.0</p>
     </div>
 
     <div class="image-card">
-      <img src="ciudad3.png" class="card-image contain-image" alt="Activación y experiencia digital">
+      <img src="ciudades3.png" class="card-image contain-image">
       <p class="card-title dark-title">Activación y experiencia digital</p>
     </div>
 
@@ -307,7 +298,7 @@ body {
   <h2>Alineado con los Objetivos de Desarrollo Sostenible</h2>
 
   <div class="ods-container">
-    <img src="IMAGEN ODS.png" class="ods-icons" alt="ODS BlueStep">
+    <img src="IMAGEN ODS.png" class="ods-icons">
   </div>
 
   <p style="margin-top:20px;">
@@ -319,7 +310,7 @@ body {
 <!-- FOOTER -->
 <div class="footer">
 
-  <img src="logo blanco sin fondo.png" class="footer-logo" alt="BlueStep blanco">
+  <img src="logo blanco sin fondo.png" class="footer-logo">
 
   <p>© SnailStep 2026 · Todos los derechos reservados</p>
 
