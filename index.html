@@ -15,11 +15,6 @@ body {
   color: white;
 }
 
-/* AZUL PROFUNDO */
-.deep-blue {
-  background: #062C4F;
-}
-
 /* HERO */
 .hero {
   position: relative;
@@ -43,29 +38,24 @@ body {
 .hero-content {
   position: relative;
   z-index: 2;
-  max-width: 850px;
-  padding: 20px;
 }
 
 .logo {
   width: 200px;
-  margin-bottom: 30px;
-}
-
-/* TEXTOS */
-.hero h1 {
-  font-size: 48px;
   margin-bottom: 20px;
 }
 
+.hero h1 {
+  font-size: 42px;
+}
+
 .hero p {
-  font-size: 20px;
-  opacity: 0.95;
+  font-size: 18px;
 }
 
 /* SECCIONES */
 .section {
-  padding: 80px 20px;
+  padding: 60px 20px;
   text-align: center;
 }
 
@@ -74,8 +64,46 @@ body {
   color: #062C4F;
 }
 
-/* GRID */
-.grid {
+.deep-blue {
+  background: #062C4F;
+}
+
+/* BLOQUE DATO */
+.stat-box {
+  background: linear-gradient(135deg, #062C4F, #0B4E86);
+  padding: 40px;
+  border-radius: 16px;
+  max-width: 800px;
+  margin: 40px auto;
+}
+
+.stat-number {
+  font-size: 70px;
+  font-weight: bold;
+}
+
+.stat-box p {
+  font-size: 18px;
+}
+
+/* FEATURES */
+.features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  max-width: 900px;
+  margin: 40px auto;
+}
+
+.feature {
+  background: rgba(255,255,255,0.15);
+  padding: 20px;
+  border-radius: 12px;
+  text-align: left;
+}
+
+/* IMÁGENES */
+.image-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
@@ -83,102 +111,38 @@ body {
   margin: auto;
 }
 
-.box {
-  background: rgba(255,255,255,0.15);
-  padding: 30px;
+.image-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
   border-radius: 12px;
 }
 
-.light .box {
-  background: white;
-}
-
-/* IMÁGENES */
-.image-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 24px;
-  max-width: 1100px;
-  margin: 40px auto 0 auto;
-}
-
-.image-card {
-  text-align: center;
-}
-
-/* BASE */
-.card-image {
-  width: 100%;
-  height: 260px;
-  border-radius: 14px;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.18);
-  transition: 0.3s;
-}
-
-/* NAVIERAS */
-.naviera-img {
-  object-fit: cover;
+.image-card p {
+  margin-top: 10px;
+  font-weight: bold;
 }
 
 /* CIUDADES */
-.contain-image {
-  object-fit: contain;
+.contain {
+  object-fit: contain !important;
   background: transparent;
-  padding: 0;
-}
-
-/* HOVER */
-.card-image:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 18px 36px rgba(0,0,0,0.25);
-}
-
-/* TÍTULOS */
-.card-title {
-  margin-top: 14px;
-  font-size: 18px;
-  font-weight: 600;
-}
-
-.dark-title {
-  color: #062C4F;
-}
-
-/* ODS */
-.ods-container {
-  margin-top: 40px;
-  display: flex;
-  justify-content: center;
-}
-
-.ods-icons {
-  max-width: 420px;
-  width: 100%;
 }
 
 /* FOOTER */
 .footer {
-  padding: 60px 20px;
-  text-align: center;
+  padding: 40px;
   background: #062C4F;
 }
 
-.footer-logo {
-  width: 140px;
-  margin-bottom: 15px;
-}
-
-.footer p {
-  font-size: 14px;
-  opacity: 0.8;
+.footer img {
+  width: 120px;
 }
 
 /* RESPONSIVE */
 @media(max-width:800px){
-  .grid { grid-template-columns: 1fr; }
+  .features { grid-template-columns: 1fr; }
   .image-grid { grid-template-columns: 1fr; }
-  .hero h1 { font-size: 32px; }
-  .hero p { font-size: 18px; }
 }
 </style>
 
@@ -188,132 +152,118 @@ body {
 
 <!-- HERO -->
 <div class="hero">
-  <div class="overlay"></div>
-
-  <div class="hero-content">
-    <img src="logo blanco sin fondo.png" class="logo">
-
-    <h1>La capa de inteligencia que falta entre el puerto y la ciudad</h1>
-
-    <p>
-      Comprende cómo se mueve la movilidad en tierra y conviértela en inteligencia útil para navieras y destinos costeros.
-    </p>
-  </div>
+<div class="overlay"></div>
+<div class="hero-content">
+<img src="logo blanco sin fondo.png" class="logo">
+<h1>La capa de inteligencia entre el puerto y la ciudad</h1>
+<p>Datos reales para navieras y destinos</p>
+</div>
 </div>
 
 <!-- PROBLEMA -->
 <div class="section light">
 
-  <img src="logo azul sin fondo.png" style="width:120px; margin-bottom:20px;">
+<img src="logo azul sin fondo.png" style="width:100px;">
 
-  <h2>12,8 millones de cruceristas y sin datos reales en tierra</h2>
-
-  <p style="max-width:760px;margin:auto;">
-    El turismo de cruceros crece cada año, pero sigue sin existir una capa real de información sobre lo que ocurre tras el desembarco.
-  </p>
+<div class="stat-box">
+<div class="stat-number">12,8M</div>
+<p>cruceristas en España sin datos reales en tierra</p>
+</div>
 
 </div>
 
-<!-- SOLUCIÓN -->
+<!-- QUE HACE -->
 <div class="section">
 
-  <h2>Qué hace BlueStep</h2>
+<h2>Qué hace BlueStep</h2>
 
-  <div class="grid">
+<div class="features">
 
-    <div class="box">
-      <h3>Inteligencia de movilidad real</h3>
-      <p>Mide cómo se desplazan las personas en entornos urbanos.</p>
-    </div>
+<div class="feature">
+<h3>Medición real</h3>
+<p>Analiza cómo se mueven las personas en ciudad</p>
+</div>
 
-    <div class="box">
-      <h3>Optimización del destino</h3>
-      <p>Mejora la experiencia urbana mediante datos reales.</p>
-    </div>
+<div class="feature">
+<h3>Datos para navieras</h3>
+<p>Convierte movimiento en inteligencia útil</p>
+</div>
 
-    <div class="box">
-      <h3>Infraestructura de datos</h3>
-      <p>Genera datasets para navieras, ciudades y puertos.</p>
-    </div>
+<div class="feature">
+<h3>Base urbana</h3>
+<p>Genera datos para planificación de ciudades</p>
+</div>
 
-  </div>
+<div class="feature">
+<h3>Activación local</h3>
+<p>Conecta turismo con comercio y cultura</p>
+</div>
+
+</div>
 
 </div>
 
 <!-- NAVIERAS -->
 <div class="section deep-blue">
 
-  <h2>Diseñado para navieras</h2>
+<h2>Para navieras</h2>
 
-  <div class="image-grid">
+<div class="image-grid">
 
-    <div class="image-card">
-      <img src="naviera1.png" class="card-image naviera-img">
-      <p class="card-title">Refuerzo ESG y reputacional</p>
-    </div>
+<div class="image-card">
+<img src="naviera1.png">
+<p>ESG y reputación</p>
+</div>
 
-    <div class="image-card">
-      <img src="naviera2.png" class="card-image naviera-img">
-      <p class="card-title">Mejor experiencia en tierra</p>
-    </div>
+<div class="image-card">
+<img src="naviera2.png">
+<p>Experiencia en tierra</p>
+</div>
 
-    <div class="image-card">
-      <img src="naviera3.png" class="card-image naviera-img">
-      <p class="card-title">Datos para decisiones estratégicas</p>
-    </div>
+<div class="image-card">
+<img src="naviera3.png">
+<p>Datos estratégicos</p>
+</div>
 
-  </div>
+</div>
 
 </div>
 
 <!-- CIUDADES -->
 <div class="section light">
 
-  <h2>Valor para puertos y ciudades</h2>
+<h2>Para ciudades</h2>
 
-  <div class="image-grid">
+<div class="image-grid">
 
-    <div class="image-card">
-      <img src="ciudades1.png" class="card-image contain-image">
-      <p class="card-title dark-title">Planificación urbana basada en datos</p>
-    </div>
+<div class="image-card">
+<img src="ciudades1.png" class="contain">
+<p>Planificación urbana</p>
+</div>
 
-    <div class="image-card">
-      <img src="3.png" class="card-image contain-image">
-      <p class="card-title dark-title">Certificación Blue Label 2.0</p>
-    </div>
+<div class="image-card">
+<img src="3.png" class="contain">
+<p>Certificación Blue Label</p>
+</div>
 
-    <div class="image-card">
-      <img src="ciudades3.png" class="card-image contain-image">
-      <p class="card-title dark-title">Activación y experiencia digital</p>
-    </div>
+<div class="image-card">
+<img src="ciudades3.png" class="contain">
+<p>Experiencia digital</p>
+</div>
 
-  </div>
+</div>
 
 </div>
 
 <!-- ODS -->
 <div class="section">
-
-  <h2>Alineado con los Objetivos de Desarrollo Sostenible</h2>
-
-  <div class="ods-container">
-    <img src="IMAGEN ODS.png" class="ods-icons">
-  </div>
-
-  <p style="margin-top:20px;">
-    ODS 3 · ODS 11 · ODS 14
-  </p>
-
+<img src="IMAGEN ODS.png" style="max-width:300px;">
 </div>
 
 <!-- FOOTER -->
 <div class="footer">
-
-  <img src="logo blanco sin fondo.png" class="footer-logo">
-
-  <p>© SnailStep 2026 · Todos los derechos reservados</p>
-
+<img src="logo blanco sin fondo.png">
+<p>© SnailStep 2026</p>
 </div>
 
 </body>
