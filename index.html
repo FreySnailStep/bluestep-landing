@@ -1,183 +1,346 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BlueStep</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BlueStep | Tourism Intelligence for Coastal Cities</title>
 
-<style>
-body {
-margin:0;
-font-family:Arial, sans-serif;
-background:#1C75BC;
-color:white;
-}
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-/* HERO */
-.hero {
-padding:100px 20px;
-text-align:center;
-}
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #1c75bc;
+      color: white;
+      line-height: 1.5;
+    }
 
-.hero h1 {
-font-size:48px;
-max-width:900px;
-margin:auto;
-}
+    h1, h2, h3, p {
+      margin: 0;
+    }
 
-.hero p {
-margin-top:20px;
-font-size:20px;
-opacity:0.9;
-}
+    .section {
+      padding: 80px 20px;
+      text-align: center;
+    }
 
-/* LOGO */
-.logo {
-width:180px;
-margin-bottom:30px;
-}
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
 
-/* SECTIONS */
-.section {
-padding:80px 20px;
-text-align:center;
-}
+    /* HERO */
+    .hero {
+      position: relative;
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: url('hero.jpg') center center / cover no-repeat;
+      overflow: hidden;
+    }
 
-.grid {
-display:grid;
-grid-template-columns:1fr 1fr 1fr;
-gap:20px;
-max-width:1000px;
-margin:auto;
-}
+    .overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(28, 117, 188, 0.62);
+    }
 
-.box {
-background:rgba(255,255,255,0.1);
-padding:30px;
-border-radius:12px;
-}
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 900px;
+      padding: 20px;
+    }
 
-/* TECH */
-.tech img {
-width:90%;
-border-radius:12px;
-margin-top:30px;
-}
+    .logo {
+      width: 180px;
+      max-width: 80%;
+      margin: 0 auto 30px auto;
+      display: block;
+    }
 
-/* SDG */
-.sdg img {
-width:80px;
-margin-bottom:10px;
-}
+    .hero h1 {
+      font-size: 52px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
 
-/* FOOTER */
-.footer {
-padding:60px 20px;
-text-align:center;
-opacity:0.8;
-}
+    .hero p {
+      font-size: 22px;
+      opacity: 0.95;
+      max-width: 760px;
+      margin: 0 auto;
+    }
 
-@media(max-width:800px){
-.grid{grid-template-columns:1fr;}
-.hero h1{font-size:30px;}
-}
-</style>
+    /* INTRO */
+    .intro {
+      background: #1c75bc;
+    }
 
+    .intro h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    .intro p {
+      max-width: 760px;
+      margin: 0 auto;
+      font-size: 19px;
+      opacity: 0.95;
+    }
+
+    /* FEATURES */
+    .features {
+      background: #1667aa;
+    }
+
+    .features h2 {
+      font-size: 36px;
+      margin-bottom: 40px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      max-width: 1050px;
+      margin: 0 auto;
+    }
+
+    .box {
+      background: rgba(255, 255, 255, 0.12);
+      border-radius: 14px;
+      padding: 28px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      backdrop-filter: blur(2px);
+    }
+
+    .box h3 {
+      font-size: 24px;
+      margin-bottom: 14px;
+    }
+
+    .box p {
+      font-size: 17px;
+      opacity: 0.95;
+    }
+
+    /* TECH BLOCK */
+    .tech {
+      background: #125894;
+    }
+
+    .tech h2 {
+      font-size: 36px;
+      margin-bottom: 18px;
+    }
+
+    .tech p {
+      max-width: 760px;
+      margin: 0 auto 36px auto;
+      font-size: 19px;
+      opacity: 0.95;
+    }
+
+    /* SDGS */
+    .sdgs {
+      background: #1c75bc;
+    }
+
+    .sdgs h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    .sdgs p {
+      max-width: 760px;
+      margin: 0 auto;
+      font-size: 19px;
+      opacity: 0.95;
+    }
+
+    .ods-container {
+      margin-top: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .ods-icons {
+      width: 100%;
+      max-width: 420px;
+      display: block;
+    }
+
+    .ods-note {
+      margin-top: 20px;
+      font-size: 16px;
+      opacity: 0.85;
+    }
+
+    /* FOOTER */
+    .footer {
+      background: #0f4d83;
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .footer p {
+      font-size: 18px;
+      opacity: 0.92;
+    }
+
+    .footer a {
+      color: white;
+      text-decoration: none;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: 40px;
+      }
+
+      .hero p {
+        font-size: 20px;
+      }
+
+      .intro h2,
+      .features h2,
+      .tech h2,
+      .sdgs h2 {
+        font-size: 30px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .hero {
+        min-height: 78vh;
+      }
+
+      .hero h1 {
+        font-size: 32px;
+      }
+
+      .hero p {
+        font-size: 18px;
+      }
+
+      .logo {
+        width: 150px;
+      }
+
+      .box h3 {
+        font-size: 22px;
+      }
+
+      .box p,
+      .intro p,
+      .tech p,
+      .sdgs p,
+      .footer p {
+        font-size: 16px;
+      }
+
+      .section {
+        padding: 60px 18px;
+      }
+    }
+  </style>
 </head>
-
 <body>
 
-<!-- HERO -->
-<div class="hero">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <img src="logo.png" alt="BlueStep logo" class="logo" />
+      <h1>Understanding coastal cities through real movement</h1>
+      <p>From port to city: mobility intelligence for better decisions</p>
+    </div>
+  </section>
 
-<img src="logo.png" class="logo">
+  <!-- INTRO -->
+  <section class="section intro">
+    <div class="container">
+      <h2>BlueStep turns movement into coastal intelligence</h2>
+      <p>
+        Transforming real-world mobility into strategic insights for ports,
+        cities and coastal destinations.
+      </p>
+    </div>
+  </section>
 
-<h1>Understanding coastal cities through real movement</h1>
+  <!-- FEATURES -->
+  <section class="section features">
+    <div class="container">
+      <h2>Tourism intelligence and sustainable destinations</h2>
 
-<p>
-From port to city: mobility intelligence for better decisions
-</p>
+      <div class="grid">
+        <div class="box">
+          <h3>Real mobility intelligence</h3>
+          <p>
+            Understand how people move between port and city in real environments.
+          </p>
+        </div>
 
-</div>
+        <div class="box">
+          <h3>Destination optimization</h3>
+          <p>
+            Improve urban experience through real movement patterns.
+          </p>
+        </div>
 
-<!-- VALUE -->
-<div class="section">
-<h2>BlueStep turns movement into coastal intelligence</h2>
+        <div class="box">
+          <h3>Data infrastructure</h3>
+          <p>
+            Structured datasets for ports, cities and coastal stakeholders.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<p style="max-width:700px;margin:auto;">
-Transforming real-world mobility into strategic insights for ports, cities and coastal destinations.
-</p>
-</div>
+  <!-- TECH -->
+  <section class="section tech">
+    <div class="container">
+      <h2>A technological layer for coastal intelligence</h2>
+      <p>
+        Visualize movement, understand dynamics and act with real-world data.
+      </p>
+    </div>
+  </section>
 
-<!-- FEATURES -->
-<div class="section">
+  <!-- SDGS -->
+  <section class="section sdgs">
+    <div class="container">
+      <h2>Aligned with the Sustainable Development Goals</h2>
+      <p>
+        BlueStep supports healthier, smarter and more sustainable coastal
+        destinations through real mobility intelligence.
+      </p>
 
-<div class="grid">
+      <div class="ods-container">
+        <img src="ods.png" alt="SDG icons" class="ods-icons" />
+      </div>
 
-<div class="box">
-<h3>Real mobility intelligence</h3>
-<p>Understand how people move between port and city in real environments.</p>
-</div>
+      <p class="ods-note">SDG 3 · SDG 11 · SDG 14</p>
+    </div>
+  </section>
 
-<div class="box">
-<h3>Destination optimization</h3>
-<p>Improve urban experience through real movement patterns.</p>
-</div>
-
-<div class="box">
-<h3>Data infrastructure</h3>
-<p>Structured datasets for ports, cities and coastal stakeholders.</p>
-</div>
-
-</div>
-
-</div>
-
-<!-- TECH -->
-<div class="section tech">
-
-<h2>A technological layer for coastal intelligence</h2>
-
-<p>
-Visualize movement, understand dynamics and act with real-world data.
-</p>
-
-<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1400&q=80">
-
-</div>
-
-<!-- SDGs -->
-<div class="section">
-
-<h2>Aligned with the Sustainable Development Goals</h2>
-
-<div class="grid">
-
-<div class="box sdg">
-<img src="https://sdgs.un.org/sites/default/files/goals/E_SDG_Icons-03.jpg">
-<p>Good Health and Well-Being</p>
-</div>
-
-<div class="box sdg">
-<img src="https://sdgs.un.org/sites/default/files/goals/E_SDG_Icons-11.jpg">
-<p>Sustainable Cities and Communities</p>
-</div>
-
-<div class="box sdg">
-<img src="https://sdgs.un.org/sites/default/files/goals/E_SDG_Icons-14.jpg">
-<p>Life Below Water</p>
-</div>
-
-</div>
-
-</div>
-
-<!-- FOOTER -->
-<div class="footer">
-
-<p>www.mybluestep.com</p>
-
-</div>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p><a href="https://www.mybluestep.com">www.mybluestep.com</a></p>
+  </footer>
 
 </body>
 </html>
