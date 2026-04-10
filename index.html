@@ -9,231 +9,256 @@
 * { box-sizing: border-box; }
 
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #1C75BC;
-  color: white;
-  line-height: 1.5;
+margin:0;
+font-family: Arial, sans-serif;
+background:#1C75BC;
+color:white;
 }
 
-/* Azul mar profundo */
+/* 🔵 AZUL PROFUNDO */
 .deep-blue {
-  background: #062C4F;
+background:#062C4F;
 }
 
+/* HERO */
 .hero {
-  position: relative;
-  height: 90vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  background: url('kevin-schmid-zLcvs3yTEF4-unsplash.jpg');
-  background-size: cover;
-  background-position: center;
+position:relative;
+height:90vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+background:url('kevin-schmid-zLcvs3yTEF4-unsplash.jpg');
+background-size:cover;
+background-position:center;
 }
 
 .overlay {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: rgba(28, 117, 188, 0.65);
+position:absolute;
+width:100%;
+height:100%;
+background:rgba(28,117,188,0.65);
 }
 
 .hero-content {
-  position: relative;
-  z-index: 2;
-  max-width: 850px;
-  padding: 20px;
+position:relative;
+z-index:2;
+max-width:850px;
+padding:20px;
 }
 
 .logo {
-  width: 180px;
-  margin-bottom: 30px;
+width:200px;
+margin-bottom:30px;
 }
 
+/* TEXTOS */
 .hero h1 {
-  font-size: 48px;
-  margin-bottom: 20px;
+font-size:48px;
+margin-bottom:20px;
 }
 
 .hero p {
-  font-size: 20px;
-  opacity: 0.95;
+font-size:20px;
+opacity:0.95;
 }
 
+/* SECCIONES */
 .section {
-  padding: 80px 20px;
-  text-align: center;
+padding:80px 20px;
+text-align:center;
 }
 
 .light {
-  background: #EAF4FF;
-  color: #062C4F;
+background:#EAF4FF;
+color:#062C4F;
 }
 
 .grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 20px;
-  max-width: 1000px;
-  margin: auto;
+display:grid;
+grid-template-columns:1fr 1fr 1fr;
+gap:20px;
+max-width:1000px;
+margin:auto;
 }
 
 .box {
-  background: rgba(255,255,255,0.15);
-  padding: 30px;
-  border-radius: 12px;
+background:rgba(255,255,255,0.15);
+padding:30px;
+border-radius:12px;
 }
 
 .light .box {
-  background: white;
+background:white;
 }
 
-.box h3 {
-  margin-top: 0;
-  margin-bottom: 12px;
-  font-size: 24px;
-}
-
+/* ODS */
 .ods-container {
-  margin-top: 40px;
-  display: flex;
-  justify-content: center;
+margin-top:40px;
+display:flex;
+justify-content:center;
 }
 
 .ods-icons {
-  max-width: 420px;
-  width: 100%;
+max-width:420px;
+width:100%;
 }
 
+/* FOOTER */
 .footer {
-  padding: 60px;
-  text-align: center;
-  background: #062C4F;
+padding:60px 20px;
+text-align:center;
+background:#062C4F;
+}
+
+.footer-logo {
+width:140px;
+margin-bottom:15px;
+opacity:0.9;
 }
 
 .footer p {
-  margin: 0;
-  opacity: 0.9;
+margin:0;
+opacity:0.8;
+font-size:14px;
 }
 
-@media(max-width: 800px) {
-  .grid { grid-template-columns: 1fr; }
-  .hero h1 { font-size: 32px; }
-  .hero p { font-size: 18px; }
+/* RESPONSIVE */
+@media(max-width:800px){
+.grid{grid-template-columns:1fr;}
+.hero h1{font-size:32px;}
+.hero p{font-size:18px;}
 }
 </style>
 
 </head>
+
 <body>
 
 <!-- HERO -->
 <div class="hero">
-  <div class="overlay"></div>
+<div class="overlay"></div>
 
-  <div class="hero-content">
-    <img src="logo.png" class="logo" alt="Logo BlueStep">
+<div class="hero-content">
 
-    <h1>La capa de inteligencia que falta entre el puerto y la ciudad</h1>
+<img src="logo%20blanco%20sin%20fondo.png" class="logo">
 
-    <p>
-      BlueStep permite comprender cómo se mueve la movilidad en tierra y convertirla en inteligencia útil para navieras, puertos y destinos costeros.
-    </p>
-  </div>
+<h1>La capa de inteligencia que falta entre el puerto y la ciudad</h1>
+
+<p>
+Comprende cómo se mueve la movilidad en tierra y conviértela en inteligencia útil para navieras y destinos costeros.
+</p>
+
+</div>
 </div>
 
 <!-- PROBLEMA -->
 <div class="section light">
-  <h2>12,8 millones de cruceristas y todavía sin datos reales en tierra</h2>
 
-  <p style="max-width:760px; margin:auto;">
-    El turismo de cruceros sigue creciendo, pero ciudades, puertos y navieras siguen sin una capa real de información sobre lo que ocurre una vez que las personas desembarcan.
-  </p>
+<img src="logo%20azul%20sin%20fondo.png" style="width:120px; margin-bottom:20px;">
+
+<h2>12,8 millones de cruceristas y sin datos reales en tierra</h2>
+
+<p style="max-width:760px;margin:auto;">
+El turismo de cruceros crece cada año, pero sigue sin existir una capa real de información sobre lo que ocurre tras el desembarco.
+</p>
+
 </div>
 
 <!-- SOLUCIÓN -->
 <div class="section">
-  <h2>Qué hace BlueStep</h2>
 
-  <div class="grid">
-    <div class="box">
-      <h3>Inteligencia real de movilidad</h3>
-      <p>Mide cómo se mueve la ciudadanía y los visitantes entre puerto y ciudad en entornos reales.</p>
-    </div>
+<h2>Qué hace BlueStep</h2>
 
-    <div class="box">
-      <h3>Optimización del destino</h3>
-      <p>Mejora la experiencia urbana y la toma de decisiones a partir de patrones de movimiento.</p>
-    </div>
+<div class="grid">
 
-    <div class="box">
-      <h3>Infraestructura de datos</h3>
-      <p>Genera datasets estructurados para navieras, ciudades y actores del ecosistema costero.</p>
-    </div>
-  </div>
+<div class="box">
+<h3>Inteligencia de movilidad real</h3>
+<p>Mide cómo se desplazan las personas en entornos urbanos.</p>
+</div>
+
+<div class="box">
+<h3>Optimización del destino</h3>
+<p>Mejora la experiencia urbana mediante datos reales.</p>
+</div>
+
+<div class="box">
+<h3>Infraestructura de datos</h3>
+<p>Genera datasets para navieras, ciudades y puertos.</p>
+</div>
+
+</div>
+
 </div>
 
 <!-- NAVIERAS -->
 <div class="section deep-blue">
-  <h2>Diseñado con foco en navieras</h2>
 
-  <div class="grid">
-    <div class="box">
-      <h3>Reputación y ESG</h3>
-      <p>Refuerza el posicionamiento en sostenibilidad y compromiso con el destino.</p>
-    </div>
+<h2>Diseñado para navieras</h2>
 
-    <div class="box">
-      <h3>Mejor experiencia en tierra</h3>
-      <p>Aporta una visión más clara de lo que sucede fuera del barco.</p>
-    </div>
+<div class="grid">
 
-    <div class="box">
-      <h3>Datos útiles para decidir</h3>
-      <p>Convierte la escala en información estratégica para futuras rutas y operaciones.</p>
-    </div>
-  </div>
+<div class="box">
+<p>Refuerzo ESG y reputacional</p>
 </div>
 
-<!-- PUERTOS Y CIUDADES -->
+<div class="box">
+<p>Mejor experiencia en tierra</p>
+</div>
+
+<div class="box">
+<p>Datos para decisiones estratégicas</p>
+</div>
+
+</div>
+
+</div>
+
+<!-- CIUDADES -->
 <div class="section light">
-  <h2>También genera valor para puertos y ciudades</h2>
 
-  <div class="grid">
-    <div class="box">
-      <h3>Planificación urbana</h3>
-      <p>Ofrece información útil para ordenar flujos y diseñar mejores entornos peatonales.</p>
-    </div>
+<h2>Valor para puertos y ciudades</h2>
 
-    <div class="box">
-      <h3>Estrategias de sostenibilidad</h3>
-      <p>Ayuda a reducir presión urbana y orientar políticas de movilidad más saludables.</p>
-    </div>
+<div class="grid">
 
-    <div class="box">
-      <h3>Activación local</h3>
-      <p>Conecta mejor la movilidad con comercio, cultura y experiencia de destino.</p>
-    </div>
-  </div>
+<div class="box">
+<p>Planificación urbana basada en datos</p>
+</div>
+
+<div class="box">
+<p>Estrategias de reducción de CO₂</p>
+</div>
+
+<div class="box">
+<p>Activación económica local</p>
+</div>
+
+</div>
+
 </div>
 
 <!-- ODS -->
 <div class="section">
-  <h2>Alineado con los Objetivos de Desarrollo Sostenible</h2>
 
-  <div class="ods-container">
-    <img src="IMAGEN ODS.png" class="ods-icons" alt="ODS BlueStep">
-  </div>
+<h2>Alineado con los Objetivos de Desarrollo Sostenible</h2>
 
-  <p style="margin-top:20px; opacity:0.85;">
-    ODS 3 · ODS 11 · ODS 14
-  </p>
+<div class="ods-container">
+<img src="IMAGEN%20ODS.png" class="ods-icons">
+</div>
+
+<p style="margin-top:20px; opacity:0.85;">
+ODS 3 · ODS 11 · ODS 14
+</p>
+
 </div>
 
 <!-- FOOTER -->
 <div class="footer">
-  <p>www.mybluestep.com</p>
+
+<img src="logo%20blanco%20sin%20fondo.png" class="footer-logo">
+
+<p>© SnailStep 2026 · Todos los derechos reservados</p>
+
 </div>
 
 </body>
