@@ -15,10 +15,13 @@
       --blue-deep: #062C4F;
       --blue-soft: #EAF4FF;
       --blue-mid: #0B4E86;
+      --green-snail: #01534f;
+      --green-soft: #16b8a6;
+      --orange-snail: #ff8a3d;
+      --orange-soft: #ffb36b;
+      --white: #ffffff;
       --text-dark: #062C4F;
       --text-soft: #35536f;
-      --white: #ffffff;
-      --glow: rgba(143, 216, 255, 0.28);
     }
 
     html {
@@ -41,7 +44,7 @@
     /* HERO */
     .hero {
       position: relative;
-      min-height: 88vh;
+      min-height: 90vh;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -53,38 +56,25 @@
       overflow: hidden;
     }
 
-    .hero::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background:
-        radial-gradient(circle at 20% 20%, rgba(143,216,255,0.18), transparent 25%),
-        radial-gradient(circle at 80% 30%, rgba(143,216,255,0.12), transparent 22%),
-        radial-gradient(circle at 50% 80%, rgba(255,255,255,0.08), transparent 28%);
-      pointer-events: none;
-    }
-
     .overlay {
       position: absolute;
       inset: 0;
-      background: linear-gradient(
-        180deg,
-        rgba(28,117,188,0.52) 0%,
-        rgba(28,117,188,0.70) 100%
-      );
+      background:
+        linear-gradient(180deg, rgba(28,117,188,0.50) 0%, rgba(28,117,188,0.72) 100%),
+        radial-gradient(circle at 20% 30%, rgba(1,83,79,0.18), transparent 25%),
+        radial-gradient(circle at 80% 20%, rgba(255,138,61,0.12), transparent 22%);
     }
 
     .hero-content {
       position: relative;
       z-index: 2;
       max-width: 980px;
-      padding: 20px;
     }
 
     .logo {
-      width: 220px;
-      margin-bottom: 28px;
-      filter: drop-shadow(0 10px 24px rgba(0,0,0,0.15));
+      width: 210px;
+      margin-bottom: 24px;
+      filter: drop-shadow(0 10px 20px rgba(0,0,0,0.15));
     }
 
     .hero h1 {
@@ -94,7 +84,7 @@
       font-weight: 800;
       margin-bottom: 18px;
       text-wrap: balance;
-      text-shadow: 0 8px 24px rgba(0,0,0,0.18);
+      text-shadow: 0 8px 24px rgba(0,0,0,0.20);
     }
 
     .hero p {
@@ -104,7 +94,7 @@
       margin: 0 auto;
       opacity: 0.98;
       font-weight: 500;
-      text-shadow: 0 6px 18px rgba(0,0,0,0.15);
+      text-shadow: 0 6px 18px rgba(0,0,0,0.16);
     }
 
     /* SECCIONES */
@@ -120,11 +110,12 @@
     }
 
     .deep-blue {
-      background: var(--blue-deep);
+      background:
+        linear-gradient(180deg, #062C4F 0%, #073863 100%);
     }
 
     .section h2 {
-      font-size: clamp(34px, 4vw, 54px);
+      font-size: clamp(34px, 4vw, 56px);
       line-height: 1.02;
       letter-spacing: -0.03em;
       font-weight: 800;
@@ -132,20 +123,20 @@
       text-wrap: balance;
     }
 
-    /* PROBLEMA */
-    .problem-intro {
-      max-width: 880px;
-      margin: 0 auto 8px auto;
-      font-size: clamp(19px, 2vw, 26px);
-      line-height: 1.4;
-      color: var(--text-dark);
+    .section-intro {
+      max-width: 900px;
+      margin: 0 auto 6px auto;
+      font-size: clamp(18px, 1.8vw, 24px);
+      line-height: 1.45;
       font-weight: 600;
     }
 
+    /* BLOQUE PROBLEMA */
     .stat-box {
-      background: linear-gradient(135deg, #062C4F 0%, #0B4E86 100%);
-      padding: 52px 36px;
-      border-radius: 22px;
+      background:
+        linear-gradient(135deg, #062C4F 0%, #0B4E86 72%, #01534f 100%);
+      padding: 54px 36px;
+      border-radius: 24px;
       max-width: 920px;
       margin: 42px auto 0 auto;
       box-shadow: 0 18px 40px rgba(6,44,79,0.18);
@@ -158,7 +149,7 @@
       position: absolute;
       inset: 0;
       background:
-        linear-gradient(120deg, transparent 0%, rgba(255,255,255,0.05) 35%, transparent 70%);
+        linear-gradient(120deg, transparent 0%, rgba(255,255,255,0.06) 35%, transparent 70%);
       transform: translateX(-100%);
       animation: sweep 6s infinite ease-in-out;
     }
@@ -170,25 +161,25 @@
     }
 
     .stat-number {
-      font-size: clamp(72px, 10vw, 130px);
+      position: relative;
+      z-index: 1;
+      font-size: clamp(74px, 10vw, 130px);
       font-weight: 900;
       line-height: 0.92;
       margin-bottom: 14px;
       letter-spacing: -0.05em;
       color: #ffffff;
-      position: relative;
-      z-index: 1;
     }
 
     .stat-box p {
+      position: relative;
+      z-index: 1;
       font-size: clamp(20px, 2.1vw, 30px);
       line-height: 1.3;
       margin: 0;
       font-weight: 700;
       color: rgba(255,255,255,0.96);
       text-wrap: balance;
-      position: relative;
-      z-index: 1;
     }
 
     /* QUE HACE */
@@ -201,7 +192,7 @@
     }
 
     .feature {
-      background: rgba(255,255,255,0.15);
+      background: rgba(255,255,255,0.14);
       padding: 28px 26px;
       border-radius: 18px;
       text-align: left;
@@ -216,9 +207,9 @@
       position: absolute;
       top: 0;
       left: 0;
-      width: 6px;
+      width: 7px;
       height: 100%;
-      background: #8FD8FF;
+      background: linear-gradient(180deg, var(--green-soft), var(--orange-snail));
     }
 
     .feature:hover {
@@ -228,7 +219,7 @@
 
     .feature h3 {
       font-size: clamp(24px, 2vw, 32px);
-      line-height: 1.1;
+      line-height: 1.08;
       letter-spacing: -0.02em;
       margin-bottom: 12px;
       font-weight: 800;
@@ -246,31 +237,41 @@
     .image-grid {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
-      gap: 24px;
-      max-width: 1100px;
-      margin: 44px auto 0 auto;
-      align-items: start;
+      gap: 26px;
+      max-width: 1140px;
+      margin: 46px auto 0 auto;
+      align-items: stretch;
     }
 
     .product-card {
       position: relative;
-      border-radius: 18px;
+      border-radius: 22px;
       overflow: hidden;
-      box-shadow: 0 16px 36px rgba(0,0,0,0.18);
+      box-shadow: 0 18px 40px rgba(0,0,0,0.18);
       transform: translateY(0);
       transition: transform 0.28s ease, box-shadow 0.28s ease;
-      min-height: 320px;
-      background: rgba(255,255,255,0.06);
+      min-height: 380px;
+      background: rgba(255,255,255,0.05);
+      isolation: isolate;
     }
 
     .product-card:hover {
       transform: translateY(-8px);
-      box-shadow: 0 22px 48px rgba(0,0,0,0.24);
+      box-shadow: 0 24px 54px rgba(0,0,0,0.24);
+    }
+
+    .product-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 22px;
     }
 
     .product-card img {
       width: 100%;
-      height: 320px;
+      height: 380px;
       display: block;
     }
 
@@ -280,46 +281,50 @@
 
     .contain {
       object-fit: contain !important;
-      background: #ffffff;
-      padding: 12px;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.96) 0%, rgba(255,255,255,1) 100%);
+      padding: 18px;
     }
 
     .product-overlay {
       position: absolute;
-      inset: 0;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      padding: 22px 20px 18px 20px;
-      background: linear-gradient(
-        180deg,
-        rgba(0,0,0,0.06) 0%,
-        rgba(0,0,0,0.18) 40%,
-        rgba(0,0,0,0.82) 100%
-      );
+      inset: auto 0 0 0;
+      padding: 24px 22px 20px 22px;
+      background:
+        linear-gradient(
+          180deg,
+          rgba(3,20,35,0.00) 0%,
+          rgba(3,20,35,0.32) 35%,
+          rgba(3,20,35,0.92) 100%
+        );
+      color: #ffffff;
+      text-align: left;
+      backdrop-filter: blur(4px);
     }
 
     .light .product-overlay {
-      background: linear-gradient(
-        180deg,
-        rgba(6,44,79,0.00) 0%,
-        rgba(6,44,79,0.10) 45%,
-        rgba(6,44,79,0.86) 100%
-      );
+      background:
+        linear-gradient(
+          180deg,
+          rgba(6,44,79,0.00) 0%,
+          rgba(6,44,79,0.18) 35%,
+          rgba(6,44,79,0.90) 100%
+        );
     }
 
     .product-label {
       display: inline-block;
-      align-self: flex-start;
       margin-bottom: 10px;
       font-size: 12px;
-      font-weight: 700;
+      font-weight: 800;
       text-transform: uppercase;
-      letter-spacing: 0.08em;
-      padding: 8px 10px;
+      letter-spacing: 0.10em;
+      padding: 8px 11px;
       border-radius: 999px;
-      background: rgba(255,255,255,0.14);
-      backdrop-filter: blur(6px);
+      color: #ffffff;
+      background:
+        linear-gradient(90deg, rgba(22,184,166,0.92), rgba(255,138,61,0.92));
+      box-shadow: 0 6px 16px rgba(0,0,0,0.14);
     }
 
     .product-card h3 {
@@ -329,32 +334,93 @@
       font-weight: 800;
       letter-spacing: -0.02em;
       text-wrap: balance;
+      color: #ffffff;
     }
 
     .product-card p {
       margin: 0;
       font-size: 16px;
-      line-height: 1.45;
-      opacity: 0.95;
+      line-height: 1.48;
+      color: rgba(255,255,255,0.95);
+      font-weight: 500;
     }
 
     .product-glow {
-      box-shadow: 0 0 0 1px rgba(143,216,255,0.15), 0 18px 42px rgba(0,255,180,0.10);
+      box-shadow:
+        0 0 0 1px rgba(22,184,166,0.14),
+        0 18px 42px rgba(0,255,180,0.12);
+    }
+
+    .product-glow:hover {
+      box-shadow:
+        0 0 0 1px rgba(255,138,61,0.18),
+        0 24px 56px rgba(22,184,166,0.16);
     }
 
     /* ODS */
+    .ods-section {
+      background:
+        linear-gradient(180deg, #2378bc 0%, #1C75BC 100%);
+    }
+
     .ods-image {
       max-width: 360px;
       width: 100%;
       display: block;
       margin: 0 auto;
+      filter: drop-shadow(0 12px 20px rgba(0,0,0,0.14));
     }
 
     .ods-caption {
       margin-top: 16px;
       font-size: 20px;
+      font-weight: 800;
+      letter-spacing: -0.01em;
+      opacity: 0.98;
+    }
+
+    /* CONTACTO */
+    .contact-section {
+      background:
+        linear-gradient(180deg, #062C4F 0%, #073863 100%);
+    }
+
+    .contact-box {
+      max-width: 700px;
+      margin: 34px auto 0 auto;
+      padding: 42px 34px;
+      border-radius: 22px;
+      background:
+        linear-gradient(135deg, rgba(255,255,255,0.10), rgba(255,255,255,0.06));
+      box-shadow: 0 16px 36px rgba(0,0,0,0.16);
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .contact-box p {
+      font-size: clamp(20px, 2vw, 28px);
+      line-height: 1.38;
       font-weight: 700;
-      opacity: 0.95;
+      margin-bottom: 26px;
+      text-wrap: balance;
+    }
+
+    .contact-button {
+      display: inline-block;
+      padding: 15px 30px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--green-soft), var(--orange-snail));
+      color: white;
+      text-decoration: none;
+      font-weight: 800;
+      font-size: 17px;
+      letter-spacing: 0.01em;
+      box-shadow: 0 10px 24px rgba(0,0,0,0.16);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .contact-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 30px rgba(0,0,0,0.22);
     }
 
     /* FOOTER */
@@ -377,13 +443,6 @@
     .footer-inner img {
       width: 150px;
       margin-bottom: 14px;
-    }
-
-    .footer-inner .tagline {
-      margin: 6px 0 10px 0;
-      font-size: 20px;
-      font-weight: 600;
-      opacity: 0.82;
     }
 
     .footer-inner .copyright {
@@ -413,7 +472,7 @@
       }
 
       .product-card img {
-        height: 280px;
+        height: 320px;
       }
     }
   </style>
@@ -437,7 +496,7 @@
 
     <h2>El problema ya es de escala</h2>
 
-    <p class="problem-intro">
+    <p class="section-intro">
       El turismo de cruceros crece, pero sigue faltando una lectura real y útil del movimiento una vez las personas desembarcan.
     </p>
 
@@ -447,7 +506,7 @@
     </div>
   </div>
 
-  <!-- QUÉ HACE -->
+  <!-- QUE HACE -->
   <div class="section">
     <h2>Qué hace BlueStep</h2>
 
@@ -490,10 +549,10 @@
       </div>
 
       <div class="product-card">
-        <img src="naviera2.png" class="naviera-img" alt="Mejor experiencia en tierra" />
+        <img src="naviera2.png" class="naviera-img" alt="Experiencia en tierra" />
         <div class="product-overlay">
           <span class="product-label">Destino</span>
-          <h3>Mejor experiencia en tierra</h3>
+          <h3>Experiencia en tierra</h3>
           <p>Impulsa recorridos más conectados, caminables y valiosos para las personas que visitan la ciudad.</p>
         </div>
       </div>
@@ -513,6 +572,10 @@
   <!-- CIUDADES -->
   <div class="section light">
     <h2>Para ciudades</h2>
+
+    <p class="section-intro">
+      Una capa tecnológica cercana, útil y visible para planificación, certificación e interacción con el destino.
+    </p>
 
     <div class="image-grid">
 
@@ -547,17 +610,26 @@
   </div>
 
   <!-- ODS -->
-  <div class="section">
+  <div class="section ods-section">
     <h2>Alineado con los Objetivos de Desarrollo Sostenible</h2>
     <img src="IMAGEN ODS.png" class="ods-image" alt="ODS BlueStep" />
     <p class="ods-caption">ODS 3 · ODS 11 · ODS 14</p>
+  </div>
+
+  <!-- CONTACTO -->
+  <div class="section contact-section">
+    <h2>Contacto</h2>
+
+    <div class="contact-box">
+      <p>¿Quieres entender cómo se mueven tus pasajeros en destino?</p>
+      <a href="mailto:info@snailstep.io" class="contact-button">Contactar</a>
+    </div>
   </div>
 
   <!-- FOOTER -->
   <div class="footer">
     <div class="footer-inner">
       <img src="logo blanco sin fondo.png" alt="BlueStep blanco" />
-      <p class="tagline">Pasos con impacto azul</p>
       <p class="copyright">© SnailStep 2026</p>
     </div>
   </div>
