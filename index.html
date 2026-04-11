@@ -359,24 +359,35 @@
 
     /* ODS */
     .ods-section {
-      background:
-        linear-gradient(180deg, #2378bc 0%, #1C75BC 100%);
+      background: linear-gradient(180deg, #2378bc 0%, #1C75BC 100%);
+      text-align: center;
     }
 
-    .ods-image {
-      max-width: 360px;
+    .ods-intro {
+      max-width: 800px;
+      margin: 0 auto 30px auto;
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 1.4;
+      opacity: 0.95;
+      text-wrap: balance;
+    }
+
+    .ods-image-large {
+      max-width: 900px;
       width: 100%;
+      margin: 30px auto;
       display: block;
-      margin: 0 auto;
-      filter: drop-shadow(0 12px 20px rgba(0,0,0,0.14));
+      border-radius: 20px;
+      background: white;
+      padding: 20px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
     }
 
     .ods-caption {
-      margin-top: 16px;
-      font-size: 20px;
-      font-weight: 800;
-      letter-spacing: -0.01em;
-      opacity: 0.98;
+      font-size: 18px;
+      font-weight: 700;
+      margin-top: 10px;
     }
 
     /* CONTACTO */
@@ -611,9 +622,17 @@
 
   <!-- ODS -->
   <div class="section ods-section">
+
     <h2>Alineado con los Objetivos de Desarrollo Sostenible</h2>
-    <img src="odsBluestep.png" class="ods-image" alt="ODS BlueStep" />
+
+    <p class="ods-intro">
+      Medimos impacto real en salud, ciudad y entorno costero a través de datos de movilidad.
+    </p>
+
+    <img src="odsBluestep.png" class="ods-image-large" alt="ODS BlueStep" />
+
     <p class="ods-caption">ODS 3 · ODS 11 · ODS 14 · ODS 17</p>
+
   </div>
 
   <!-- CONTACTO -->
